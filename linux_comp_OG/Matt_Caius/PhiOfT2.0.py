@@ -50,7 +50,7 @@ def PhiOfT2(output_path,network,resolution = 200):
         delta_time = final_time - start_time
 
         to_save_results(temperature_parameters, J, E, M, H, S, Simulated_FC, Critical_Temperature,
-                        output_path + "/" + network + "/")
+                        output_path + "/" + network + "/", temperature_distribution='log')
 
         print("It took " + str(delta_time) + " seconds to calculate the simulated functional connectivity matricies\n\n")
 

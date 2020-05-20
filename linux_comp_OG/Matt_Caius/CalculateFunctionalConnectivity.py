@@ -1,5 +1,5 @@
-from projects.generalize_ising_model.tools.utils import find_dimensionality
-from projects.phi.tools.utils import load_matrix
+from linux_comp_OG.projects.generalize_ising_model.tools.utils import find_dimensionality
+from linux_comp_OG.projects.phi.tools.utils import load_matrix
 import numpy as np
 import matplotlib.pyplot as plt
 import os

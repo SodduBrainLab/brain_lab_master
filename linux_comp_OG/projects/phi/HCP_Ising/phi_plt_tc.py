@@ -8,8 +8,8 @@ ts = np.linspace(temperature_parameters[0], temperature_parameters[1], temperatu
 
 del ts[0:5]
 
-filePathPhi = '/home/brainlab/Desktop/Popiel/Ising_HCP/Aud/phi/phi.csv'
-filePathSum =  '/home/brainlab/Desktop/Popiel/Ising_HCP/Aud/phi/phiSum.csv'
+filePathPhi = '/home/brainlab/Desktop/Popiel/Ising_HCP/Aud/avg/phi/phi.csv'
+filePathSum =  '/home/brainlab/Desktop/Popiel/Ising_HCP/Aud/avg/phi/phiSum.csv'
 filepathCrit = ''
 phi = load_matrix(filePathPhi)
 phiSum = load_matrix(filePathSum)

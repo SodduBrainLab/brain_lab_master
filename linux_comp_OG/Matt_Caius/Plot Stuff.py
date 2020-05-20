@@ -3,7 +3,7 @@ import numpy as np
 from projects.generalize_ising_model.core import generalized_ising
 from projects.generalize_ising_model.tools.utils import *
 from projects.phi.tools.utils import *
-from Matt_Caius.CalculateFunctionalConnectivity import network_tstars
+from linux_comp_OG.Matt_Caius.CalculateFunctionalConnectivity import network_tstars
 
 def GenFig(network,no_runs = 200):
 
@@ -44,6 +44,7 @@ def GenFig(network,no_runs = 200):
     axs[0].axvline(PhiMax, color='b')
     axs[0].axvline(PhiSusMax, color='r')
     axs[0].axvline(tstar, color='g')
+    axs[0].semilogx()
     axs[0].set(ylabel='Phi')
 
     axs[1].scatter(ts, phiSusList)
@@ -52,10 +53,13 @@ def GenFig(network,no_runs = 200):
     axs[1].axvline(CritTemp, color='k')
     axs[1].axvline(PhiMax, color='b')
     axs[1].axvline(PhiSusMax, color='r')
+    axs[1].semilogx()
     axs[1].axvline(tstar, color='g')
     axs[1].set(xlabel='Temperature', ylabel='Susceptibility of Phi')
 
     plt.tight_layout()
+
+    plt.show()
 
     plt.savefig(outputPath + "/" + network + ".png")
 
