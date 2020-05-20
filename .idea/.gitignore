@@ -1,3 +1,9 @@
 # Default ignored files
+/workspace.xml
+/brain_lab_master.imi
+/misc.xml
+/modules.xml
+/vcs.xml
+/inspectionProfiles/
 /shelf/
 /workspace.xml
