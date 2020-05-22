@@ -5,7 +5,7 @@ from os import walk
 import time
 import numpy as np
 
-path_input = '/home/brainlab/Desktop/Rudas/Data/Ising/new_experiment/data'
+path_input = '/home/brainlab/Desktop/Rudas/Data/Ising/new_experiment/datasheel'
 
 default_Jij_name = 'J_ij.csv'
 simulation_name = 'hcp'
