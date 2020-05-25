@@ -49,8 +49,9 @@ plt.figure(figsize=(16,12))
 sns.catplot(
     data=new_df,
     x='network',
-    y='delta_taken_over_rest',
+    y='percent_diff',
     palette='Set1',
+    kind='bar',
     hue='state',
     aspect=3,
     height=3,
