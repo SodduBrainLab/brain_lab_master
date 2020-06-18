@@ -1,6 +1,5 @@
-import plotly.graph_objects as go
-
 import numpy as np
+import plotly.graph_objects as go
 
 # Generate curve data
 t = np.linspace(-1, 1, 100)

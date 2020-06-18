@@ -1,8 +1,8 @@
 # Auditory Network test. 13 subjects
 
-import numpy as np
 import matplotlib.pyplot as plt
-import scipy.stats as ss
+import numpy as np
+
 from projects.phi.tools.utils import *
 
 path_for_baseline = '/home/user/Desktop/data_phi/Propofol/task/Baseline'

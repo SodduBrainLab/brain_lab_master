@@ -1,12 +1,6 @@
 import pandas as pd
-import scipy.stats as stats
-import researchpy as rp
-import statsmodels.api as sm
-from statsmodels.formula.api import ols
 import pingouin as pg
-
-import matplotlib.pyplot as plt
-from projects.phi.tools.utils import *
+import researchpy as rp
 
 # The first thing to do is create and store the data as dictionaries to turn into a pandas dataframe
 filename = '/home/user/Desktop/phi_csv/anova_csv/everything2.csv'

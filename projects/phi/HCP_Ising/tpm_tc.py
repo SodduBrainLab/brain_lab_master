@@ -1,9 +1,11 @@
-from projects.generalize_ising_model.core import generalized_ising
-from projects.generalize_ising_model.tools.utils import to_normalize, to_save_results, makedir,save_file
-from projects.phi.tools.utils import load_matrix, file_exists,main_tpm_branch,to_calculate_mean_phi
 import time
+
 import numpy as np
 import pyphi
+
+from projects.generalize_ising_model.core import generalized_ising
+from projects.generalize_ising_model.tools.utils import to_normalize, makedir, save_file
+from projects.phi.tools.utils import load_matrix, main_tpm_branch, to_calculate_mean_phi
 
 if __name__ == '__main__':
 

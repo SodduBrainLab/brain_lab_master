@@ -1,6 +1,6 @@
-import scipy.io
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+import scipy.io
 from generalize_ising_model.ising_utils import corrfun, dim, find_nearest
 
 np.set_printoptions(precision=4)

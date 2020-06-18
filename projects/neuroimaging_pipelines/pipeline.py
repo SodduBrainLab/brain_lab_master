@@ -1,30 +1,29 @@
+import os
 from os.path import join as opj
-from nipype.interfaces.fsl import (BET, ExtractROI, FAST, FLIRT, MCFLIRT, SliceTimer, Threshold)
-from .interfaces.ExtractConfounds import ExtractConfounds
-from .interfaces.SignalExtraction import SignalExtraction
-from .interfaces.ArtifacRemotion import ArtifacRemotion
-from .interfaces.N4Bias import N4Bias
-from .interfaces.Reslicing import Reslicing
-from .interfaces.Descomposition import Descomposition
-from .interfaces.ExtractB0 import ExtractB0
-from .interfaces.Denoise import Denoise
-from .interfaces.ModelDTI import ModelDTI
-from .interfaces.Tractography import Tractography
-from .interfaces.MedianOtsu import MedianOtsu
-from .interfaces.Registration import Registration
-from .interfaces.RegistrationAtlas import RegistrationAtlas
-from nipype.interfaces.fsl import Eddy
-from nipype.interfaces.fsl import EddyCorrect
-from nipype.interfaces.utility import IdentityInterface
-from nipype.interfaces.io import SelectFiles, DataSink
-from nipype.algorithms.rapidart import ArtifactDetect
-from nipype import Workflow, Node
-from nipype.interfaces.spm import Normalize12
-from nipype.algorithms.misc import Gunzip
-from .tools.utils import *
 
 import nipype.interfaces.spm as spm
-import os
+from nipype import Workflow, Node
+from nipype.algorithms.misc import Gunzip
+from nipype.algorithms.rapidart import ArtifactDetect
+from nipype.interfaces.fsl import (BET, ExtractROI, FAST, FLIRT, MCFLIRT, SliceTimer, Threshold)
+from nipype.interfaces.fsl import EddyCorrect
+from nipype.interfaces.io import SelectFiles, DataSink
+from nipype.interfaces.spm import Normalize12
+from nipype.interfaces.utility import IdentityInterface
+
+from .interfaces.ArtifacRemotion import ArtifacRemotion
+from .interfaces.Denoise import Denoise
+from .interfaces.Descomposition import Descomposition
+from .interfaces.ExtractB0 import ExtractB0
+from .interfaces.ExtractConfounds import ExtractConfounds
+from .interfaces.MedianOtsu import MedianOtsu
+from .interfaces.ModelDTI import ModelDTI
+from .interfaces.N4Bias import N4Bias
+from .interfaces.RegistrationAtlas import RegistrationAtlas
+from .interfaces.Reslicing import Reslicing
+from .interfaces.SignalExtraction import SignalExtraction
+from .interfaces.Tractography import Tractography
+from .tools.utils import *
 
 
 class Pipeline(object):

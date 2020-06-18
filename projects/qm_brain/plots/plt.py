@@ -1,7 +1,6 @@
-from projects.qm_brain.utils.utils import *
-import numpy as np
 import matplotlib.pyplot as plt
 
+from projects.qm_brain.utils.utils import *
 
 main_path = '/home/user/Desktop/QMBrain/RestData/'
 

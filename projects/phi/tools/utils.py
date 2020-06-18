@@ -208,8 +208,6 @@ def plot_ts_avg(ts,path_output = None,num=None):
             plt.close()
 
 def empirical_tpm_og(time_series,path_output,tpm_count):
-    import numpy as np
-    from nilearn import plotting
     tpm, state_total,frequency = main_tpm_branch(time_series)
 
     # Normalizing respect to rows

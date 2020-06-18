@@ -1,9 +1,10 @@
+import time
+
+import numpy as np
+
 from projects.generalize_ising_model.core import generalized_ising
 from projects.generalize_ising_model.tools.utils import *
 from projects.phi.tools.utils import *
-import matplotlib as plt
-import numpy as np
-import time
 
 #where data comes from
 input_path = '/home/brainlab/Desktop/Matt/ConnectomeData/'

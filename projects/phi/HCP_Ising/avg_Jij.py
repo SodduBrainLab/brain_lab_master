@@ -1,5 +1,6 @@
-from projects.phi.tools.utils import load_matrix,save_Jij,makedir2,make_Jij_array,avg_Jij,file_exists
 import numpy as np
+
+from projects.phi.tools.utils import load_matrix, save_Jij, makedir2, make_Jij_array, avg_Jij, file_exists
 
 main_path = '/home/brainlab/Desktop/Popiel/Ising_HCP/'
 

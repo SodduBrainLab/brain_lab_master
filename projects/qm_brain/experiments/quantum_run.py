@@ -1,6 +1,7 @@
-from projects.qm_brain.utils.utils import *
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+
+from projects.qm_brain.utils.utils import *
 
 num_subjects = 4
 main_path = '/home/user/Desktop/QMBrain/EEG Data/'

@@ -1,6 +1,8 @@
-from projects.phi.tools.utils import *
 import os
+
 import numpy as np
+
+from projects.phi.tools.utils import *
 
 test_path = '/home/user/Desktop/data_phi/Propofol/Awake/datasink/preprocessing/'
 ts_name = 'time_series.csv'

@@ -1,5 +1,6 @@
-from nipype.interfaces.base import BaseInterfaceInputSpec, File, TraitedSpec, traits, BaseInterface, OutputMultiPath
 import os
+
+from nipype.interfaces.base import BaseInterfaceInputSpec, File, TraitedSpec, BaseInterface, OutputMultiPath
 
 
 class MedianOtsuInputSpec(BaseInterfaceInputSpec):

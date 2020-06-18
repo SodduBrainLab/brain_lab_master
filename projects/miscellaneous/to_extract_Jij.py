@@ -1,6 +1,7 @@
-import scipy.io
-import numpy as np
 import os
+
+import numpy as np
+import scipy.io
 
 mat = scipy.io.loadmat('/home/brainlab/Desktop/Rudas/Scripts/ising/dimentionality/wd1/toJorge.mat')
 path_output = '/home/brainlab/Desktop/Rudas/Data/Ising/HCP/'

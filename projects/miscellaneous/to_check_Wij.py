@@ -1,6 +1,7 @@
-from natsort import natsorted
 import os
+
 import numpy as np
+from natsort import natsorted
 
 path = '/home/brainlab/Desktop/Rudas/Data/Ising/experiment_2/data/6_density'
 default_Jij_name = 'J_ij.csv'

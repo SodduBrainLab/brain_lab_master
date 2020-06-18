@@ -1,9 +1,5 @@
-import numpy as np
-import scipy.io as sio
-import pyphi
-import time
-from projects.sina_paper.ising import gen_reservoir
 import matplotlib.pyplot as plt
+import numpy as np
 
 network = input('Network: ')
 filename = 'Ising_Phi_' + network

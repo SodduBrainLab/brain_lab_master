@@ -1,9 +1,7 @@
-import time
+import matplotlib.pyplot as plt
 import numpy as np
 from generalize_ising_model.external_field.core_external_field import generalized_ising
 from generalize_ising_model.ising_utils import to_normalize, save_results, makedir
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
 
 path_input = '/home/brainlab/Desktop/Rudas/Data/Ising/HCP/data/hcp_mean/J_ij.csv'
 path_output = '/home/brainlab/Desktop/Rudas/Data/Ising/HCP/data/hcp_mean/results/'

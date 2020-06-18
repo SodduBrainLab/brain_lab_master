@@ -1,6 +1,7 @@
-from projects.qm_brain.utils.utils import *
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+
+from projects.qm_brain.utils.utils import *
 
 filepathMat = '/home/user/Desktop/QMBrain/EEG1.mat'
 filepathChanLoc = '/home/user/Desktop/QMBrain/chanLocXY.csv'

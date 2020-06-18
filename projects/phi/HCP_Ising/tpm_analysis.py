@@ -1,9 +1,9 @@
-from projects.generalize_ising_model.core import generalized_ising
-from projects.generalize_ising_model.tools.utils import to_normalize, makedir,save_file
-from projects.phi.tools.utils import load_matrix, file_exists,tpm_SbyN_2
-from projects.phi.utils import *
-import matplotlib.pyplot as plt
 import time
+
+from projects.generalize_ising_model.core import generalized_ising
+from projects.generalize_ising_model.tools.utils import to_normalize, makedir
+from projects.phi.tools.utils import load_matrix, tpm_SbyN_2
+from projects.phi.utils import *
 
 # Ising Parameters
 temperature_parameters = (0.004, 2.5, 50)  # Temperature parameters (initial tempeture, final tempeture, number of steps)

@@ -1,12 +1,5 @@
-from generalize_ising_model.ising_utils import to_normalize, correlation_function, dim, find_nearest
-from os import walk
 import numpy as np
-import pickle
-from natsort import natsorted
-import matplotlib.pyplot as plt
-import os
-import matplotlib.patches as mpatches
-import scipy.io
+from generalize_ising_model.ising_utils import correlation_function, dim, find_nearest
 
 path_simulation = '/home/brainlab/Desktop/Rudas/Data/Ising/experiment_2/data/hcp_parcellation/simulation/parcellation_48/'
 #path_simulation = '/home/brainlab/Desktop/Rudas/Data/Ising/experiment_2/simulation/9_biological/hcp/entity_0/'

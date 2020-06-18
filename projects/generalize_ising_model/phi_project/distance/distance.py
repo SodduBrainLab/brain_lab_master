@@ -1,6 +1,6 @@
-from generalize_ising_model.phi_project.distance.distance_utils import *
 import collections
 
+from generalize_ising_model.phi_project.distance.distance_utils import *
 
 path_emp = '/home/user/Desktop/phiTest/mean_struct_corr.mat'
 path_sim = '/home/user/Desktop/phiTest/AUD/sim_fc.npy'

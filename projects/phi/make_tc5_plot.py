@@ -1,6 +1,7 @@
-from projects.phi.tools.utils import make_ts_array,load_matrix
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+
+from projects.phi.tools.utils import load_matrix
 
 ts_path = '/home/user/Desktop/data_phi/Propofol/Awake/datasink/preprocessing/sub-2014_05_16_16RA/_image_parcellation_path_..home..brainlab..Desktop..Rudas..Data..Parcellation..rsn_parcellations..Default..Default_parcellation_5.nii/time_series.csv'
 

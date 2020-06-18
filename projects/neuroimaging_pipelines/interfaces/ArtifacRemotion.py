@@ -1,5 +1,7 @@
-from nipype.interfaces.base import BaseInterfaceInputSpec, File, TraitedSpec, BaseInterface
 import os
+
+from nipype.interfaces.base import BaseInterfaceInputSpec, File, TraitedSpec, BaseInterface
+
 
 class ArtifacRemotionInputSpec(BaseInterfaceInputSpec):
     in_file = File(exists=True, mandatory=True)

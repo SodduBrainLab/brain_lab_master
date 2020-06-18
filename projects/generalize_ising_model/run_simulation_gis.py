@@ -1,9 +1,11 @@
+import os
+import time
+from os import walk
+
+import numpy as np
+
 from projects.generalize_ising_model.core import generalized_ising
 from projects.generalize_ising_model.tools.utils import to_normalize, to_save_results
-import os
-from os import walk
-import time
-import numpy as np
 
 path_input = '/home/brainlab/Desktop/Rudas/Data/Ising/new_experiment/data'
 

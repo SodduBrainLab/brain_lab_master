@@ -1,5 +1,6 @@
-from projects.qm_brain.utils.utils import  *
 import matplotlib.pyplot as plt
+
+from projects.qm_brain.utils.utils import *
 
 times= load_matrix('/home/user/Desktop/QMBrain/New Data/times.csv')
 

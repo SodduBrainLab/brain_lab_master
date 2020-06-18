@@ -1,7 +1,7 @@
-from projects.qm_brain.utils.utils import *
-import scipy.stats as ss
 import numpy as np
-import pandas as pd
+import scipy.stats as ss
+
+from projects.qm_brain.utils.utils import *
 
 cond10_taken_avg_tpm = load_matrix('/home/user/Desktop/QMBrain/tpm/8_regions/tpm_us_taken.csv')
 cond12_taken_avg_tpm = load_matrix('/home/user/Desktop/QMBrain/tpm/8_regions/tpm_s_taken.csv')

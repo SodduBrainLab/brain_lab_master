@@ -1,11 +1,12 @@
-import numpy as np
-import matplotlib.pyplot as plt
-import sys
-import networkx as nx
+import os
 import random
+import sys
+
+import matplotlib.pyplot as plt
+import networkx as nx
+import numpy as np
 from numpy import NaN, Inf, arange, isscalar, asarray, array
 from scipy.optimize import curve_fit
-import os
 
 
 def makedir(path):

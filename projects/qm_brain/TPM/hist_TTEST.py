@@ -1,8 +1,7 @@
-from projects.qm_brain.utils.utils import *
 import numpy as np
-import matplotlib.pyplot as plt
 import scipy.stats as ss
-import pandas as pd
+
+from projects.qm_brain.utils.utils import *
 
 main_path = '/home/user/Desktop/QMBrain/'
 condition_list = ['Cond10/','Cond12/']

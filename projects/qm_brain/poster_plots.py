@@ -1,7 +1,9 @@
-from projects.qm_brain.utils.utils import *
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 import seaborn as sns
+
+from projects.qm_brain.utils.utils import *
+
 sns.set(style="ticks")
 import pandas as pd
 

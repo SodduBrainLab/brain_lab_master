@@ -1,10 +1,11 @@
+import multiprocessing
+import warnings
+
+import math
 import numpy as np
 from numpy.random import permutation, random
-import time
-import multiprocessing
-import math
+
 from .tools.utils import to_find_critical_temperature
-import warnings
 
 warnings.filterwarnings("ignore")
 n_cpu = multiprocessing.cpu_count() - 1

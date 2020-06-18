@@ -1,12 +1,12 @@
-from projects.generalize_ising_model.tools.utils import to_normalize, to_save_results, correlation_function, dim, find_nearest
-from os import walk
-import numpy as np
-import pickle
-from natsort import natsorted
-import matplotlib.pyplot as plt
 import os
+import pickle
+
 import matplotlib.patches as mpatches
-from networkx.utils import *
+import matplotlib.pyplot as plt
+import numpy as np
+from natsort import natsorted
+
+from projects.generalize_ising_model.tools.utils import correlation_function, dim, find_nearest
 
 path_simulation_output = ['/home/brainlab/Desktop/Rudas/Data/Ising/new_experiment/simulation/1_density_25_size_20',
                           '/home/brainlab/Desktop/Rudas/Data/Ising/new_experiment/simulation/0_density_50_size_20',

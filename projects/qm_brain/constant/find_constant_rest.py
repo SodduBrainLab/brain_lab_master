@@ -1,6 +1,7 @@
-from projects.qm_brain.utils.utils import  *
 import numpy as np
 import pandas as pd
+
+from projects.qm_brain.utils.utils import *
 
 num_subjects = 13
 main_path = '/home/user/Desktop/QMBrain/RestData/Try1/'

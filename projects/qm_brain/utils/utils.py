@@ -1,10 +1,12 @@
+import os
+
+import matplotlib.pyplot as plt
 import numpy as np
 import scipy.io
-import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-import os
-from scipy.signal import hilbert
 from pynufft import NUFFT_cpu
+from scipy.signal import hilbert
+
 
 def load_matrix(filepath):
     extension = filepath.split('.')[-1]

@@ -1,8 +1,8 @@
-from nilearn.image import iter_img
-import nibabel as nib
-from nilearn.plotting import plot_stat_map
-import numpy as np
 import matplotlib.pyplot as plt
+import nibabel as nib
+import numpy as np
+from nilearn.image import iter_img
+from nilearn.plotting import plot_stat_map
 
 path_ic = '/home/brainlab/Desktop/testcristian/fmri/output/datasink/preprocessing/sub-sub1/descomposition_canica.nii.gz'
 number_threshold = 10

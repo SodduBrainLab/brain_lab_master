@@ -1,8 +1,8 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
 from projects.generalize_ising_model.core import generalized_ising
 from projects.generalize_ising_model.tools.utils import *
-import matplotlib.pyplot as plt
-import time
-import numpy as np
 
 #path_input = '/home/brainlab/Desktop/Rudas/Data/dwitest/HCP/parcellation2/output/workingdir/preproc/_subject_id_sub1/tractography/Jij_112.csv'
 #path_input = '/home/brainlab/Desktop/Rudas/Data/dwitest/HCP/parcellation3/output/workingdir/preproc/_subject_id_sub1/tractography/Jij_48.csv'

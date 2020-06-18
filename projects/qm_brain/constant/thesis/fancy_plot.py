@@ -1,12 +1,10 @@
-from projects.qm_brain.utils.utils import *
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import matplotlib
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 import os
 
+import matplotlib.animation as animation
+import matplotlib.pyplot as plt
+import numpy as np
+
+from projects.qm_brain.utils.utils import *
 
 '''
 def get_data(table,rownum,title):

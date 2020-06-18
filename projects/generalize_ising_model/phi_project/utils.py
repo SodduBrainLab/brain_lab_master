@@ -1,7 +1,8 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import pyphi
 from pyphi.compute import phi
-import matplotlib.pyplot as plt
+
 
 def to_calculate_mean_phi(tpm, spin_mean,t):
     N = tpm.shape[-1]

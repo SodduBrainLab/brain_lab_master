@@ -1,7 +1,9 @@
-import numpy as np
 import os
-from scipy.signal import hilbert
+
+import numpy as np
 import scipy.io
+from scipy.signal import hilbert
+
 
 # Necessary functions
 

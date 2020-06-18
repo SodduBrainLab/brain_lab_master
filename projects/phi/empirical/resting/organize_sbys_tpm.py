@@ -1,6 +1,4 @@
 from projects.phi.tools.utils import *
-import os
-import numpy as np
 
 ts_name = 'time_series.csv'
 rsn_path = [

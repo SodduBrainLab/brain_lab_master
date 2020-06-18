@@ -1,13 +1,12 @@
 # Make random matrices for speed testing
 
-import scipy.io
+import time
+
 import numpy as np
 from generalize_ising_model.core import generalized_ising
-import time
-import matplotlib.pyplot as plt
-import collections
-from generalize_ising_model.ising_utils import distance_wei, to_normalize, to_save_results, makedir, to_generate_randon_graph, save_graph
-from generalize_ising_model.phi_project.utils import to_estimate_tpm_from_ising_model, to_calculate_mean_phi, to_save_phi
+from generalize_ising_model.ising_utils import to_save_results, makedir, to_generate_randon_graph, save_graph
+from generalize_ising_model.phi_project.utils import to_estimate_tpm_from_ising_model, to_calculate_mean_phi, \
+    to_save_phi
 
 dir_output_name = '/home/user/Desktop/phiTest/speedTest'
 

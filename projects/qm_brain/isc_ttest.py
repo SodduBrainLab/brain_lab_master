@@ -1,11 +1,9 @@
 
-from projects.qm_brain.utils.utils import *
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 import pandas as pd
 import scipy.stats as ss
 
+from projects.qm_brain.utils.utils import *
 
 stimuli =[('New Data/',15),('BYD/',14),('nyc_data/',13)]
 

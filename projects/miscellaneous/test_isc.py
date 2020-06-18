@@ -1,12 +1,12 @@
-import numpy as np
 import nibabel as nib
-from scipy.stats import zscore
-from statsmodels.stats.multitest import multipletests
-from nilearn.plotting import plot_stat_map
-
+import numpy as np
 from neuroimaging_pipelines.tools.compute_isc import (isc, bootstrap_isc, load_images,
                                                       load_boolean_mask, mask_images,
                                                       MaskedMultiSubjectData)
+from nilearn.plotting import plot_stat_map
+from scipy.stats import zscore
+from statsmodels.stats.multitest import multipletests
+
 
 def run(roo_path, path_output):
 

@@ -1,7 +1,7 @@
-import numpy as np
-from networkx.utils import *
 import os
-from generalize_ising_model.ising_utils import save_graph, makedir
+
+from generalize_ising_model.ising_utils import save_graph
+from networkx.utils import *
 
 # Average Value
 path_input = '/home/user/Desktop/'

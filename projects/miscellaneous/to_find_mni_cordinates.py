@@ -3,7 +3,6 @@ from nibabel.affines import apply_affine
 import nibabel as nib
 import numpy as np
 from numpy.linalg import inv
-from nilearn import datasets, image
 from nilearn import plotting
 
 

@@ -1,10 +1,8 @@
 from pyAudioAnalysis import audioBasicIO
-from dcor import distance_correlation, u_distance_correlation_sqr
 import numpy as np
 from scipy.stats import pearsonr
 import matplotlib.pyplot as plt
 from nilearn.signal import clean
-from neuroimaging_pipelines.tools.utils import dspmt
 
 audio_path = "/home/brainlab/Desktop/Rudas/Data/Propofol/Taken-[AudioTrimmer.com].wav"
 time_series_path = '/home/brainlab/Desktop/Rudas/Data/Propofol/Awake/Task/output/datasink/preprocessing/sub-2014_05_02_02CB/time_series.csv'

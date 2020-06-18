@@ -1,7 +1,6 @@
-import numpy as np
 import csv
-import matplotlib.pyplot as plt
-import math
+
+import numpy as np
 
 path_mritoolbox_predictors = '/home/brainlab/test.csv'
 path_output = '/home/brainlab/mritoolbox_predictors.csv'

@@ -1,5 +1,6 @@
-from nipype.interfaces.base import BaseInterfaceInputSpec, File, TraitedSpec, traits, BaseInterface
 import os
+
+from nipype.interfaces.base import BaseInterfaceInputSpec, File, TraitedSpec, traits, BaseInterface
 
 
 class SignalExtractionInputSpec(BaseInterfaceInputSpec):
@@ -31,9 +32,7 @@ class SignalExtraction(BaseInterface):
     def _run_interface(self, runtime):
 
         from nilearn.input_data import NiftiLabelsMasker
-        from nilearn.image import clean_img
         import numpy as np
-        import nibabel as nib
 
         '''
         image_cleaned = clean_img(self.inputs.in_file,

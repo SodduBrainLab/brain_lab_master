@@ -1,6 +1,6 @@
-import numpy as np
 import matplotlib.pyplot as plt
-import scipy.stats as ss
+import numpy as np
+
 from projects.phi.tools.utils import *
 
 temperature_parameters = (0.004, 2.5, 50)

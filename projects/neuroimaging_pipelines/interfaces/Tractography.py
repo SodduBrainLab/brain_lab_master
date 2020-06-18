@@ -29,8 +29,6 @@ class Tractography(BaseInterface):
         import nibabel as nib
         from dipy.core.gradients import gradient_table
         import dipy.reconst.dti as dti
-        from dipy.reconst.dti import color_fa, fractional_anisotropy, quantize_evecs
-        from dipy.data import get_sphere
         from dipy.tracking.eudx import EuDX
         from dipy.tracking.utils import connectivity_matrix
         import numpy as np

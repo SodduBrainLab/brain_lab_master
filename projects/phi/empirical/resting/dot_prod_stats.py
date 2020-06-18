@@ -1,13 +1,7 @@
-import pandas as pd
-import numpy as np
-import scipy.stats as stats
-import researchpy as rp
-import statsmodels.api as sm
-from statsmodels.formula.api import ols
-import seaborn as sns
-
 import matplotlib.pyplot as plt
-from projects.phi.tools.utils import *
+import numpy as np
+import pandas as pd
+import seaborn as sns
 
 # The first thing to do is create and store the data as dictionaries to turn into a pandas dataframe
 filename = '/home/user/Desktop/phi_csv/anova_csv/everything.csv'

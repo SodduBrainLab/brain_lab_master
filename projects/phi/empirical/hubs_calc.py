@@ -1,12 +1,7 @@
-import numpy as np
 import matplotlib.pyplot as plt
-from projects.phi.tools.utils import *
-from scipy.stats import mannwhitneyu
-from scipy.stats import entropy
 import numpy as np
-import networkx as nx
-from projects.generalize_ising_model.core import generalized_ising
-from projects.generalize_ising_model.tools.utils import to_normalize, to_save_results, correlation_function, dim, find_nearest
+
+from projects.phi.tools.utils import *
 
 hubs = np.squeeze(load_matrix('/home/user/Desktop/data_phi/tpm/DMN/Hubs.npy'))
 

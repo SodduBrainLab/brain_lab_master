@@ -1,5 +1,6 @@
-from projects.qm_brain.utils.utils import *
 import numpy as np
+
+from projects.qm_brain.utils.utils import *
 
 num_subjects = 5
 main_path = '/home/user/Desktop/QMBrain/BYD/'

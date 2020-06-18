@@ -1,5 +1,6 @@
-from projects.phi.tools.utils import *
 import numpy as np
+
+from projects.phi.tools.utils import *
 
 main_in = '/home/brainlab/Desktop/Rudas/Data/hcp_100/output/workingdir/preproc/'
 main_out = '/home/brainlab/Desktop/Popiel/HCP_Jij/'

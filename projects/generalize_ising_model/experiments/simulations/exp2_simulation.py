@@ -1,11 +1,12 @@
-import time
-import numpy as np
 import os
-import gc
 import pickle
-from projects.generalize_ising_model.tools.utils import to_normalize, to_save_results
-from projects.generalize_ising_model.core import generalized_ising
+import time
+
+import numpy as np
 from natsort import natsorted
+
+from projects.generalize_ising_model.core import generalized_ising
+from projects.generalize_ising_model.tools.utils import to_normalize, to_save_results
 
 path_input = '/home/brainlab/Desktop/Rudas/Data/Ising/new_experiment/'
 default_Jij_name = 'J_ij.csv'

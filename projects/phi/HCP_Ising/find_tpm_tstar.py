@@ -1,8 +1,9 @@
-from projects.generalize_ising_model.tools.utils import save_file,ks_test
+import matplotlib
+
+from projects.generalize_ising_model.tools.utils import ks_test
 from projects.phi.tools.utils import load_matrix
 from projects.phi.utils import *
 
-import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 

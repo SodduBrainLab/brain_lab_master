@@ -1,5 +1,5 @@
-from generalize_ising_model.ising_utils import save_graph, makedir
 import networkx as nx
+from generalize_ising_model.ising_utils import save_graph, makedir
 
 default_size = 40
 default_no_entities = 20

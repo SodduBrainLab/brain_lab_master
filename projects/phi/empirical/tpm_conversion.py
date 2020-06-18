@@ -1,7 +1,8 @@
-import numpy as np
 import pyphi
 from projects.phi.tools.utils import *
+import pyphi
 
+from projects.phi.tools.utils import *
 
 networks = ['Aud','DMN','Dorsal','Ventral','Cingulo','Fronto','Retro','SMhand','SMmouth','Vis']
 

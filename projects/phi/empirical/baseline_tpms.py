@@ -1,6 +1,4 @@
 from projects.phi.tools.utils import *
-import os
-import numpy as np
 
 brain_states = ['Awake','Deep','Mild','Recovery']
                 # ['Recovery']

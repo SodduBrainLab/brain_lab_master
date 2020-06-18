@@ -1,7 +1,9 @@
-from projects.qm_brain.utils.utils import *
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 from matplotlib import animation
+
+from projects.qm_brain.utils.utils import *
+
 
 def get_your_animation(xIn,yIn,max_inds,path):
 

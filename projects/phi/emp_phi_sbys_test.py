@@ -1,5 +1,3 @@
-import numpy as np
-import pyphi
 from projects.phi.tools.utils import *
 
 

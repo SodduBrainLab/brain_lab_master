@@ -41,17 +41,18 @@ The implementation is based on the work in [Hasson2004]_, [Kauppi2014]_,
 #          Mai Nguyen, and Mor Regev
 # Princeton University, 2018
 
-import numpy as np
+import itertools
+import itertools as it
 import logging
+from pathlib import Path
+from typing import Callable, Iterable, Sequence, Type, TypeVar, Union
+
+import nibabel as nib
+import numpy as np
+from nibabel.spatialimages import SpatialImage
+from scipy.fftpack import fft, ifft
 from scipy.spatial.distance import squareform
 from scipy.stats import pearsonr
-from scipy.fftpack import fft, ifft
-import itertools as it
-import nibabel as nib
-from nibabel.spatialimages import SpatialImage
-from pathlib import Path
-from typing import Callable, Iterable, List, Sequence, Type, TypeVar, Union
-import itertools
 
 logger = logging.getLogger(__name__)
 

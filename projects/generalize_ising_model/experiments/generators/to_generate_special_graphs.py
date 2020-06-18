@@ -1,8 +1,6 @@
-from networkx.utils import *
 import networkx as nx
-from generalize_ising_model.ising_utils import save_graph, makedir
 import numpy as np
-import os
+from generalize_ising_model.ising_utils import save_graph, makedir
 
 path_input = '/home/brainlab/Desktop/Rudas/Data/Ising/experiment_1/'
 

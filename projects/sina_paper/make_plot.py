@@ -1,7 +1,8 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+
 from projects.qm_brain.utils.utils import load_matrix
-from matplotlib.ticker import ScalarFormatter,AutoMinorLocator
+
 
 def get_axis_limits(ax, scale=.9):
     return ax.get_xlim()[1]*scale, ax.get_ylim()[1]*scale

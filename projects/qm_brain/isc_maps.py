@@ -1,10 +1,11 @@
 
-from projects.qm_brain.utils.utils import *
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas as pd
 import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
+
+from projects.qm_brain.utils.utils import *
 
 matplotlib.rcParams.update({'font.size': 18})
 

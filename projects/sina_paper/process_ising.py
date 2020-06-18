@@ -1,10 +1,9 @@
-import numpy as np
-import scipy.io as sio
 # import pyphi
-import time
-from projects.sina_paper.ising import gen_reservoir
 import matplotlib.pyplot as plt
+import numpy as np
+
 from projects.qm_brain.utils.utils import load_matrix
+
 
 def movingaverage(interval, window_size):
     window = np.ones(int(window_size)) / float(window_size)

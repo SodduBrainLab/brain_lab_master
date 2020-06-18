@@ -1,12 +1,11 @@
-from projects.generalize_ising_model.tools.utils import to_normalize, to_save_results, correlation_function, dim, find_nearest
-from os import walk
+import os
+import pickle
+
 import networkx as nx
 import numpy as np
-import pickle
 from natsort import natsorted
-import matplotlib.pyplot as plt
-import os
-import matplotlib.patches as mpatches
+
+from projects.generalize_ising_model.tools.utils import correlation_function, dim, find_nearest
 
 '''
 

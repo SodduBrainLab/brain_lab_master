@@ -1,7 +1,6 @@
 import os
 from natsort import natsorted
 from generalize_ising_model.ising_utils import makedir
-from dipy.io.streamline import save_trk, load_trk
 import nibabel as nib
 from dipy.tracking.utils import connectivity_matrix
 import matplotlib

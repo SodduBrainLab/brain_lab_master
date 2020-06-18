@@ -1,5 +1,6 @@
-from projects.qm_brain.utils.utils import *
 import numpy as np
+
+from projects.qm_brain.utils.utils import *
 
 main_path = '/home/user/Desktop/QMBrain/new_movie/'
 num_sub = 13

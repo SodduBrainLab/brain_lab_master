@@ -1,7 +1,10 @@
-import numpy as np
 import time
+
+import numpy as np
+
 from projects.generalize_ising_model.core import generalized_ising
-from projects.generalize_ising_model.tools.utils import to_save_results,to_generate_random_graph,to_normalize,save_graph
+from projects.generalize_ising_model.tools.utils import to_save_results, to_generate_random_graph, to_normalize, \
+    save_graph
 
 sizes = [250]#[250,500]
 main_path = '/home/user/Desktop/Popiel/check_ising/'

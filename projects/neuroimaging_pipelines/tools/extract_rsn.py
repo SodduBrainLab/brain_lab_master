@@ -1,9 +1,10 @@
-import pandas as pd
-import numpy as np
-from sklearn.cluster import KMeans
 import nibabel as nib
-from projects.generalize_ising_model.tools.utils import makedir
+import numpy as np
+import pandas as pd
 import scipy.ndimage as ndim
+from sklearn.cluster import KMeans
+
+from projects.generalize_ising_model.tools.utils import makedir
 
 parcellation_rsn_path = '/home/brainlab/Desktop/Rudas/Data/Parcellation/rsn/Parcels_MNI_222.nii'
 parcellation_rsn_labels_path = '/home/brainlab/Desktop/Rudas/Data/Parcellation/rsn/Parcels.csv'

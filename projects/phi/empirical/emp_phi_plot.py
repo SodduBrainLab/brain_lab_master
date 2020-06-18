@@ -1,7 +1,7 @@
-from projects.phi.tools.utils import *
 import matplotlib.pyplot as plt
 import numpy as np
 
+from projects.phi.tools.utils import *
 
 phi_awake = load_matrix('/home/user/Desktop/data_phi/phi/tests/concat/Awake/phi_1.csv')
 phi_sum_awake = load_matrix('/home/user/Desktop/data_phi/phi/tests/concat/Awake/phiSum_1.csv')

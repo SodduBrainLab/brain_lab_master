@@ -1,8 +1,5 @@
-from projects.generalize_ising_model.core import generalized_ising
-from projects.generalize_ising_model.tools.utils import to_normalize, to_save_results, makedir,save_file
-from projects.phi.tools.utils import load_matrix, file_exists
+from projects.phi.tools.utils import load_matrix
 from projects.phi.utils import *
-import time
 
 # Ising Parameters
 temperature_parameters = (0.004, 2.5, 50)  # Temperature parameters (initial tempeture, final tempeture, number of steps)

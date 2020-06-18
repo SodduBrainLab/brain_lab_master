@@ -1,5 +1,5 @@
-from nilearn import datasets, image
 import numpy as np
+from nilearn import datasets, image
 
 niimg = datasets.load_mni152_template()
 print(niimg.get_data().shape)

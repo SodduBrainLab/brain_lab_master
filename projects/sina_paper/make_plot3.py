@@ -1,10 +1,10 @@
-import numpy as np
 import matplotlib.pyplot as plt
-from projects.qm_brain.utils.utils import load_matrix
-from matplotlib.ticker import ScalarFormatter,AutoMinorLocator
-from projects.phi.tools.utils import save_list
-import seaborn as sns
+import numpy as np
 import pandas as pd
+import seaborn as sns
+
+from projects.qm_brain.utils.utils import load_matrix
+
 
 def get_axis_limits(ax, scale=.9):
     return ax.get_xlim()[1]*scale, ax.get_ylim()[1]*scale

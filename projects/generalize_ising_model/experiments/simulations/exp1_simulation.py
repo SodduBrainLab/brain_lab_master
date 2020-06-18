@@ -1,8 +1,10 @@
-from projects.generalize_ising_model.tools.utils import save_graph, to_save_results
 import os
-import networkx as nx
-import random
 import pickle
+import random
+
+import networkx as nx
+
+from projects.generalize_ising_model.tools.utils import save_graph
 
 path_input = '/home/brainlab/Desktop/Rudas/Data/Ising/'
 simulation_name = 'experiment_1'

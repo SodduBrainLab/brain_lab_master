@@ -1,8 +1,6 @@
+import numpy as np
 from pyAudioAnalysis import audioBasicIO
 from pyAudioAnalysis import audioFeatureExtraction
-import matplotlib.pyplot as plt
-import numpy as np
-from scipy import stats
 
 #audio_path = "/home/brainlab/Desktop/Rudas/Data/Propofol/Taken-[AudioTrimmer.com].wav"
 audio_path =  "/home/brainlab/Desktop/Rudas/Data/Propofol/Taken-[AudioTrimmer.com].wav"
@@ -17,7 +15,6 @@ F, f_names = audioFeatureExtraction.stFeatureExtraction(x, Fs, tr*Fs, tr*Fs)
 
 np.savetxt('audio_predictors.txt', np.transpose(F[:21]), fmt='%10.6f', delimiter=',')
 
-from nilearn.signal import clean
 #F = clean(signals=F,
 #          detrend=False,
 #          standardize=True,

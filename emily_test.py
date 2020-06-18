@@ -1,8 +1,5 @@
-import statsmodels.api as sa
-import statsmodels.formula.api as sfa
 import scikit_posthocs as sp
-import numpy as np
-import pandas as pd
+import statsmodels.api as sa
 
 df = sa.datasets.get_rdataset('iris').data
 

@@ -1,8 +1,3 @@
-import os,sys
-import numpy as np
-
-
-
 def dec2bin(num,num_digits):
     frmt = '{:0'
     frmt += str(num_digits)

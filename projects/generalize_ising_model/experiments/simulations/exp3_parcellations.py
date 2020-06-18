@@ -1,10 +1,10 @@
-import time
-import numpy as np
 import os
+import time
+
 import gc
-import pickle
-from generalize_ising_model.ising_utils import to_normalize, save_results
+import numpy as np
 from generalize_ising_model.core import generalized_ising
+from generalize_ising_model.ising_utils import to_normalize, save_results
 from natsort import natsorted
 
 path_input = '/home/brainlab/Desktop/Rudas/Data/Ising/experiment_2/data/hcp_parcellation/'

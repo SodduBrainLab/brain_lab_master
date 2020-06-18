@@ -1,5 +1,6 @@
-from matplotlib import pyplot as plt
 from matplotlib import animation
+from matplotlib import pyplot as plt
+
 
 def get_your_animation(xIn,yIn,xPoint,yPoint,path):
 

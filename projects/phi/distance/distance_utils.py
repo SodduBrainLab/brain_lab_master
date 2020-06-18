@@ -1,8 +1,8 @@
-import numpy as np
-from scipy.signal import argrelextrema
-import scipy.io
 import matplotlib.pyplot as plt
+import numpy as np
+import scipy.io
 import scipy.stats
+from scipy.signal import argrelextrema
 
 
 def matrix_distance(A,B,type=None):
@@ -158,7 +158,7 @@ def create_state_matrix(J):
 
 def monte_carlo_metropolis(J, spin_vec, t, iterations, thermalize_time=None):
     no_spin = len(spin_vec)
-    from numpy.random import permutation, random, choice
+    from numpy.random import permutation, random
 
     list_spin = []
 

@@ -1,7 +1,7 @@
 import numpy as np
 import pyphi
-from projects.phi.tools.utils import *
 
+from projects.phi.tools.utils import *
 
 brain_states = ['Awake','Deep','Mild','Recovery']
 

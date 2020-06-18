@@ -1,5 +1,6 @@
-from projects.qm_brain.utils.utils import *
 import numpy as np
+
+from projects.qm_brain.utils.utils import *
 
 tpm_dims  = [8]#[4,8]
 

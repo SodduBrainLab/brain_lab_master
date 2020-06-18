@@ -1,10 +1,9 @@
-from projects.phi.tools.utils import load_matrix
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib as mpl
-import os
-from matplotlib.ticker import ScalarFormatter,AutoMinorLocator
+from matplotlib.ticker import ScalarFormatter, AutoMinorLocator
+
+from projects.phi.tools.utils import load_matrix
 
 main_path = '/home/user/Desktop/Popiel/check_ising/'
 

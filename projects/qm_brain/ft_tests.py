@@ -1,6 +1,9 @@
-from projects.qm_brain.utils.utils import *
-import numpy as np
 import time
+
+import numpy as np
+
+from projects.qm_brain.utils.utils import *
+
 
 def get_probability(wavefun):
 

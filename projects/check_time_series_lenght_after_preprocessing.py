@@ -1,5 +1,6 @@
 import os
 import os.path as path
+
 import nibabel as nib
 
 preprocessing_path = '/home/brainlab/Desktop/Rudas/Data/Propofol/Deep/Task/output/datasink/preprocessing'

@@ -1,5 +1,6 @@
-from nipype.interfaces.base import BaseInterfaceInputSpec, File, TraitedSpec, traits, BaseInterface, OutputMultiPath
 import os
+
+from nipype.interfaces.base import BaseInterfaceInputSpec, File, TraitedSpec, traits, BaseInterface, OutputMultiPath
 
 
 class DescompositionInputSpec(BaseInterfaceInputSpec):
@@ -23,7 +24,7 @@ class Descomposition(BaseInterface):
     def _run_interface(self, runtime):
 
         from nilearn.decomposition import CanICA, DictLearning
-        from nilearn.plotting import plot_stat_map, plot_prob_atlas
+        from nilearn.plotting import plot_stat_map
         from nilearn.image import iter_img
         from nilearn.input_data import NiftiMapsMasker
         import numpy as np

@@ -1,6 +1,6 @@
-from projects.phi.tools.utils import *
-import os
 import numpy as np
+
+from projects.phi.tools.utils import *
 
 ts_name = 'time_series.csv'
 brain_states = ['Awake','Deep','Mild','Recovery']

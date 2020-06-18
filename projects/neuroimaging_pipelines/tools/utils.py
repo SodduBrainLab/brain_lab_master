@@ -1,19 +1,17 @@
+import warnings
 from functools import partial
+
 import numpy as np
 import scipy.stats as sps
-import numpy as np
-from dipy.align.metrics import CCMetric, EMMetric, SSDMetric
-from dipy.align.imwarp import SymmetricDiffeomorphicRegistration
-
 from dipy.align.imaffine import (transform_centers_of_mass,
                                  AffineMap,
                                  MutualInformationMetric,
                                  AffineRegistration)
-
+from dipy.align.imwarp import SymmetricDiffeomorphicRegistration
+from dipy.align.metrics import CCMetric, EMMetric, SSDMetric
 from dipy.align.transforms import (TranslationTransform3D,
                                    RigidTransform3D,
                                    AffineTransform3D)
-import warnings
 
 warnings.filterwarnings("always")
 

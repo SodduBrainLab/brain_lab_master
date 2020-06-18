@@ -1,5 +1,6 @@
-from projects.generalize_ising_model.phi_project.random_matrices.phi_sim_save import phi_sim_save
 from projects.generalize_ising_model.ising_utils import makedir
+
+from projects.generalize_ising_model.phi_project.random_matrices.phi_sim_save import phi_sim_save
 
 if __name__ == '__main__':
     output_directory = '/home/user/Desktop/phiTest/randomTest'

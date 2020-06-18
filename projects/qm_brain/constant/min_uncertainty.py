@@ -1,8 +1,10 @@
-from projects.qm_brain.utils.utils import  *
-import numpy as np
-import matplotlib.pyplot as plt
 import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
 from matplotlib.backends.backend_pgf import FigureCanvasPgf
+
+from projects.qm_brain.utils.utils import *
+
 matplotlib.backend_bases.register_backend('pdf',FigureCanvasPgf)
 
 

@@ -1,10 +1,10 @@
-import numpy as np
-from numpy.random import permutation, random
-import time
 import multiprocessing
-import math
-from generalize_ising_model.ising_utils import to_find_critical_temperature
 import warnings
+
+import math
+import numpy as np
+from generalize_ising_model.ising_utils import to_find_critical_temperature
+from numpy.random import permutation, random
 
 warnings.filterwarnings("ignore")
 n_cpu = multiprocessing.cpu_count() - 7

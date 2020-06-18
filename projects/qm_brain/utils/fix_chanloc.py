@@ -1,6 +1,6 @@
 import numpy as np
-from projects.qm_brain.utils.utils import load_matrix, save_file
 
+from projects.qm_brain.utils.utils import load_matrix, save_file
 
 chanLocs = load_matrix('/home/user/Desktop/QMBrain/EEG Data/1/chanLocXY.csv')
 x = chanLocs[:, 0]

@@ -1,10 +1,10 @@
-import numpy as np
-import scipy.io as sio
-import pyphi
-import time
-from ising import gen_reservoir
-import matplotlib.pyplot as plt
 import os
+import time
+
+import numpy as np
+import pyphi
+import scipy.io as sio
+from ising import gen_reservoir
 
 
 def calc_mean_phi(J, TPM, spinBin):

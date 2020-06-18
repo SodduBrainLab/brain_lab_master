@@ -1,10 +1,6 @@
-import numpy as np
-import scipy.io as sio
 # import pyphi
-import time
-from projects.sina_paper.ising import gen_reservoir
 import matplotlib.pyplot as plt
-
+import numpy as np
 
 filename = '_meanPhi.npz'
 directory = '/home/user/Desktop/Popiel/ising-iit-paper/results_data/Ising_random_met_pyPhi/Ising_random_met_'
