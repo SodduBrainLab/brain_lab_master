@@ -86,24 +86,32 @@ def to_save_results(temperature_parameters, J, E, M, H, S, simulated_fc, critica
     plt.xlabel("Temperature (T)", fontsize=20)
     plt.ylabel("Energy ", fontsize=20)
     plt.axis('tight')
+    if temperature_distribution == 'log':
+        plt.semilogx()
 
     f.add_subplot(2, 2, 2)
     plt.scatter(ts, abs(M), s=50, marker='o', color='RoyalBlue')
     plt.xlabel("Temperature (T)", fontsize=20)
     plt.ylabel("Magnetization ", fontsize=20)
     plt.axis('tight')
+    if temperature_distribution == 'log':
+        plt.semilogx()
 
     f.add_subplot(2, 2, 3)
     plt.scatter(ts, H, s=50, marker='o', color='IndianRed')
     plt.xlabel("Temperature (T)", fontsize=20)
     plt.ylabel("Specific Heat", fontsize=20)
     plt.axis('tight')
+    if temperature_distribution == 'log':
+        plt.semilogx()
 
     f.add_subplot(2, 2, 4)
     plt.scatter(ts, S, s=50, marker='o', color='RoyalBlue')
     plt.xlabel("Temperature (T)", fontsize=20)
     plt.ylabel("Susceptibility", fontsize=20)
     plt.axis('tight')
+    if temperature_distribution == 'log':
+        plt.semilogx()
 
     # plt.show()
     plt.savefig(path_output + 'plots.png', dpi=300)

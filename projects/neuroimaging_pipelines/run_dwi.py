@@ -1,7 +1,10 @@
 from projects.neuroimaging_pipelines.pipeline import PipelineDWI
 
-paths = {'input_path': '/home/brainlab/Desktop/Pubu/test_dwi',
+paths = {'input_path': '/home/brainlab/Desktop/Rudas/Data/DTI_st_joes',
          'image_parcellation_path': [
+             '/home/brainlab/Desktop/Rudas/Data/Parcellation/atlas_NMI_2mm.nii',
+             '/home/brainlab/Desktop/Rudas/Data/Parcellation/rsn/Parcels_MNI_222.nii',
+             '/home/brainlab/Desktop/Rudas/Data/Parcellation/AAL2/aal2.nii',
              '/home/brainlab/Desktop/Rudas/Data/Parcellation/rsn_parcellations/Auditory/Auditory_parcellation_5.nii',
              '/home/brainlab/Desktop/Rudas/Data/Parcellation/rsn_parcellations/CinguloOperc/CinguloOperc_parcellation_5.nii',
              '/home/brainlab/Desktop/Rudas/Data/Parcellation/rsn_parcellations/CinguloParietal/CinguloParietal_parcellation_5.nii',
@@ -17,33 +20,39 @@ paths = {'input_path': '/home/brainlab/Desktop/Pubu/test_dwi',
          'template_spm_path': '/home/brainlab/Desktop/Rudas/Data/Parcellation/TPM.nii',
          'mcr_path': '/home/brainlab/Desktop/Rudas/Tools/MCR/v713',
          'spm_path': '/home/brainlab/Desktop/Rudas/Tools/spm12_r7487/spm12/run_spm12.sh',
-         't1_relative_path': 'data/T1w/T1w_acpc_dc_restore_1.25.nii.gz',
-         'dwi_relative_path': 'data/T1w/Diffusion/data.nii.gz',
-         'bvec_relative_path': 'data/T1w/Diffusion/bvecs',
-         'bval_relative_path': 'data/T1w/Diffusion/bvals'}
+         't1_relative_path': 'T1w.nii.gz',
+         'dwi_relative_path': 'AP/data.nii',
+         'bvec_relative_path': 'AP/bvec',
+         'bval_relative_path': 'AP/bval'}
 
 parameters = {'iso_size': 2}
 
-subject_list = ['103414']
-                #'857263_3T_Diffusion_preproc',
-                #'856766_3T_Diffusion_preproc',
-                #'792564_3T_Diffusion_preproc',
-                #'756055_3T_Diffusion_preproc',
-                #'751348_3T_Diffusion_preproc',
-                #'672756_3T_Diffusion_preproc',
-                #'654754_3T_Diffusion_preproc',
-                #'499566_3T_Diffusion_preproc',
-                #'414229_3T_Diffusion_preproc',
-                #'397760_3T_Diffusion_preproc',
-                #'366446_3T_Diffusion_preproc',
-                #'298051_3T_Diffusion_preproc',
-                #'280739_3T_Diffusion_preproc']
-                #'211720_3T_Diffusion_preproc']
-                #'245333_3T_Diffusion_preproc',
-                #'239944_3T_Diffusion_preproc',
-                #'221319_3T_Diffusion_preproc',
-                #'214423_3T_Diffusion_preproc',
-                #'212318_3T_Diffusion_preproc']
+subject_list = ['Sub1',
+                'Sub2',
+                'Sub3',
+                'Sub4',
+                'Sub5',
+                'Sub6',
+                'Sub7',
+                'Sub8',
+                'Sub9',
+                'Sub10',
+                'Sub11',
+                'Sub12',
+                'Sub13',
+                'Sub14',
+                'Sub15',
+                'Sub16',
+                'Sub17',
+                'Sub18',
+                'Sub19',
+                'Sub20',
+                'Sub21',
+                'Sub22',
+                'Sub23',
+                'Sub24',
+                'Sub25']
+
 
 pipeline = PipelineDWI(paths=paths, parameters=parameters, subject_list=subject_list)
 pipeline.run()

@@ -10,6 +10,7 @@ from .interfaces.ExtractB0 import ExtractB0
 from .interfaces.Denoise import Denoise
 from .interfaces.ModelDTI import ModelDTI
 from .interfaces.Tractography import Tractography
+from .interfaces.FeatureScalarMap import FeatureScalarMap
 from .interfaces.MedianOtsu import MedianOtsu
 from .interfaces.Registration import Registration
 from .interfaces.RegistrationAtlas import RegistrationAtlas
@@ -440,6 +441,76 @@ class PipelinefMRI(Pipeline):
                          #(descomposition, datasink, [('out_file', 'preprocessing.@descomposition')]),
                          #(descomposition, datasink, [('plot_files', 'preprocessing.@descomposition_plot_files')])
                          #])
+
+        preproc.write_graph(graph2use='colored', format='png', simple_form=True)
+        preproc.run()
+
+class PipelinePET(Pipeline):
+
+    def run(self):
+        matlab_cmd = self.paths['spm_path'] + ' ' + self.paths['mcr_path'] + '/ script'
+        spm.SPMCommand.set_mlab_paths(matlab_cmd=matlab_cmd, use_mcr=True)
+        print(matlab_cmd)
+        print('SPM version: ' + str(spm.SPMCommand().version))
+
+        experiment_dir = opj(self.paths['input_path'], 'output_pet/')
+        output_dir = 'datasink'
+        working_dir = 'workingdir'
+
+        subject_list = self.subject_list
+
+        # list of subject identifiers
+
+        iso_size = self.parameters['iso_size']  # Isometric resample of functional images to voxel size (in mm)
+        scalar_map_relative_path = self.paths['scalar_map_relative_path']
+
+        denoise = Node(Denoise(), name="denoising") #Interfaces with dipy
+
+        n4bias = Node(N4Bias(out_file='pet_n4bias.nii.gz'), name='n4bias') #Interface with SimpleITK
+
+        gunzip = Node(Gunzip(), name="gunzip")
+
+        normalize_pet = Node(Normalize12(jobtype='estwrite',
+                                        tpm=self.paths['template_spm_path'],
+                                        write_voxel_sizes=[iso_size, iso_size, iso_size],
+                                        write_bounding_box=[[-90, -126, -72], [90, 90, 108]]),
+                            name="normalize_pet")
+
+        feature_extraction = Node(FeatureScalarMap(), name='feature_extraction')
+        feature_extraction.iterables = [('image_parcellation_path', self.paths['image_parcellation_path'])]
+
+        # Infosource - a function free node to iterate over the list of subject names
+        infosource = Node(IdentityInterface(fields=['subject_id']), name="infosource")
+        infosource.iterables = [('subject_id', subject_list)]
+
+        # SelectFiles - to grab the data (alternativ to DataGrabber)
+        pet_file = opj('{subject_id}', scalar_map_relative_path)
+
+        templates = {'pet': pet_file}
+
+        selectfiles = Node(SelectFiles(templates, base_directory=self.paths['input_path']), name="selectfiles")
+
+        # Datasink - creates output folder for important outputs
+        datasink = Node(DataSink(base_directory=experiment_dir, container=output_dir), name="datasink")
+
+        # Create a preprocessing workflow
+        preproc = Workflow(name='preproc')
+        preproc.base_dir = opj(experiment_dir, working_dir)
+
+        ## Use the following DataSink output substitutions
+        substitutions = [('_subject_id_', 'sub-')]
+
+        datasink.inputs.substitutions = substitutions
+
+        # Connect all components of the preprocessing workflow
+        preproc.connect([(infosource, selectfiles, [('subject_id', 'subject_id')]),
+                         (selectfiles, n4bias, [('pet', 'in_file')]),
+                         (n4bias, denoise, [('out_file', 'in_file')]),
+                         (denoise, gunzip, [('out_file', 'in_file')]),
+                         (gunzip, normalize_pet, [('out_file', 'image_to_align')]),
+                         (gunzip, normalize_pet, [('out_file', 'apply_to_files')]),
+                         (normalize_pet, feature_extraction, [('normalized_files', 'in_file')]),
+                         (feature_extraction, datasink, [('out_file', 'preprocessing.@feature_scalar_maps')])])
 
         preproc.write_graph(graph2use='colored', format='png', simple_form=True)
         preproc.run()

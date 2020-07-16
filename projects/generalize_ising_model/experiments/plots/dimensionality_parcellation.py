@@ -1,4 +1,4 @@
-from generalize_ising_model.ising_utils import to_normalize, correlation_function, dim, find_nearest
+from projects.generalize_ising_model.tools.utils import to_normalize, correlation_function, dim, find_nearest
 from os import walk
 import numpy as np
 import pickle
