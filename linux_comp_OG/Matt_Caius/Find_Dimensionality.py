@@ -1,25 +1,14 @@
-from projects.generalize_ising_model.tools.utils import find_dimensionality
-from projects.phi.tools.utils import load_matrix
+from linux_comp_OG.projects.generalize_ising_model.tools.utils import find_dimensionality
+from linux_comp_OG.projects.phi.tools.utils import load_matrix
 import numpy as np
 import matplotlib.pyplot as plt
 
-inputPath = "/home/brainlab/Desktop/Matt/ConnectomeOutput/"
-outputPath = "/home/brainlab/Desktop/Matt/ConnectomeOutput/"
+inputPath = "D:/OneDrive/School/Research/ConnectomeOutput/"
+outputPath = "D:/OneDrive/School/Research/ConnectomeOutput/"
 
-networks = [
-    "Dorsal",
-    "Visual",
-    "DMN",
-    "RS",
-    "FP",
-    "Aud",
-    "CO",
-    "Ventral",
-    "SMHand",
-    "SMMouth"
-]
-
+networks = ["Aud", "CO", "CP", "DMN", "Dorsal", "FP", "RS", "SMHand", "SMMouth", "Ventral", "Visual"]
 dimensionality = list()
+JijSum = list()
 
 for network in networks:
     networkPath = inputPath + network
@@ -31,16 +20,32 @@ for network in networks:
     ts = np.logspace(-1,np.log10(4),num=200)
 
     dimensionality.append(find_dimensionality(J,sim_FC,TCrit,ts))
+    JijSum.append(sum(sum(J)))
+
+print(JijSum)
 
 plt.bar(networks,dimensionality)
 plt.xlabel("Networks")
 plt.ylabel("Dimensionality")
 plt.title("Dimensionality of Average Jijs for Each Network")
-plt.xticks(rotation = "vertical")
+foo, labels = plt.xticks()
+plt.setp(labels, rotation=30, horizontalalignment='right')
 plt.tight_layout()
+plt.savefig("D:/OneDrive/School/Research/ConnectomeOutput/FiguresNew/dimensionality.png", dpi = 1000,)
+np.savetxt("D:/OneDrive/School/Research/ConnectomeOutput/Dimensionality/dimensionality.csv", dimensionality)
+plt.clf()
 
-plt.savefig("/home/brainlab/Desktop/Matt/ConnectomeOutput/Figures/dimensionality.png", dpi = 1000,)
-plt.show()
+plt.bar(networks,JijSum)
+plt.xlabel("Networks")
+plt.ylabel("Sum")
+plt.title("Sum of Average Jijs for Each Network")
+foo, labels = plt.xticks()
+plt.setp(labels, rotation=30, horizontalalignment='right')
+plt.tight_layout()
+plt.savefig("D:/OneDrive/School/Research/ConnectomeOutput/FiguresNew/JijSum.png", dpi = 1000)
+np.savetxt("D:/OneDrive/School/Research/ConnectomeOutput/Dimensionality/JijSum.csv", JijSum)
+plt.clf()
+
 
 
 

@@ -6,7 +6,7 @@ import time
 
 
 # where it will go
-output_path = '/home/brainlab/Desktop/Matt/ConnectomeOutput/'
+output_path = 'D:\OneDrive\School\Research\ConnectomeOutput\GIMTEST'
 
 makedir(output_path)
 
@@ -15,7 +15,7 @@ makedir(output_path)
 
 def PhiOfT2(output_path,network,resolution = 200):
     # where data comes from
-    input_path = '/home/brainlab/Desktop/Matt/ConnectomeData/HCP_Average/'+network+"/"
+    input_path = 'D:/OneDrive/School/Research/ConnectomeData/'+network+"/"
 
     # temporary stuff
     file_name = "Jij_avg.csv"
@@ -28,8 +28,10 @@ def PhiOfT2(output_path,network,resolution = 200):
     # Ising Parameters
     temperature_parameters = (
         -1, 4, resolution)  # Temperature parameters (initial tempeture, final temperature, number of steps)
-    no_simulations = 3000  # Number of simulations after thermalization
-    thermalize_time = 0.5  #
+    # no_simulations = 3000  # Number of simulations after thermalization
+    # thermalize_time = 0.5  #
+    no_simulations = 4000
+    thermalize_time = 0.25
     makedir(output_path+"/" + network)
     save_path = output_path+"/" + network
 
@@ -66,6 +68,8 @@ def PhiOfT2(output_path,network,resolution = 200):
 
     count = 0
 
+
+
     for temp in ts:
         phiOut = output_path + "/" + network + "/" + str(count + 1)
         makedir(phiOut)
@@ -76,27 +80,27 @@ def PhiOfT2(output_path,network,resolution = 200):
         save_tpm(tpm, phiOut, count + 1)
         count += 1
 
-    #count = 0
+    count = 0
 
-    #for FPM in FPMs:
+    for FPM in FPMs:
         phiOut = output_path + "/" + network + "/" + str(count + 1)
         makedir(phiOut)
         print(phiOut)
 
-        #if not file_exists(phiOut + "/phi.csv"):
-            #start_time = time.time()
+        if not file_exists(phiOut + "/phi.csv"):
+            start_time = time.time()
 
-            #phi_, phiSum, phiSus = to_calculate_mean_phi(FPM, meanSpins[:, count], temp)
-            #print("It took,", time.time()-start_time, "to calculate phi")
+            phi_, phiSum, phiSus = to_calculate_mean_phi(FPM, meanSpins[:, count], temp)
+            print("It took,", time.time()-start_time, "to calculate phi")
 
-            #np.savetxt(phiOut + "/phi.csv", [phi_, phiSum, phiSus])
+            np.savetxt(phiOut + "/phi.csv", [phi_, phiSum, phiSus])
 
-        #else:
-            #print("This is already done")
+        else:
+            print("This is already done")
 
 
 
-        #count += 1
+        count += 1
 
 parcels = ['Ventral', 'Visual']
 
