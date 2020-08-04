@@ -72,7 +72,6 @@ i = 0
 for subject in range(no_subject):
     for network in networks:
         subject_rhoIJ[network].append(extract_rho(time_series_paths[i]))
-        print(network,time_series_paths[i])
         i += 1
 
 network_tstars = dict()

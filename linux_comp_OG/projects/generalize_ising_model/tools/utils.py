@@ -193,7 +193,7 @@ def to_find_critical_temperature(data, temp):
     y_test = data.copy()
     y_test[np.array(local_max)] = (y_test[np.array(local_max) + 1] + y_test[np.array(local_max) - 1]) / 2
 
-    return temp[np.where(y_test == np.max(y_test[local_max]))]
+    return temp[np.where(y_test == np.max(y_test[local_max[0]]))[0][0]]
 
 
 def to_normalize(J,netx = False):

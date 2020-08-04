@@ -81,36 +81,27 @@ def to_save_results(temperature_parameters, J, E, M, H, S, simulated_fc, critica
 
     f = plt.figure(figsize=(18, 10))  # plot the calculated values
 
-    f.add_subplot(2, 2, 1)
-    plt.scatter(ts, E, s=50, marker='o', color='IndianRed')
-    plt.xlabel("Temperature (T)", fontsize=20)
-    plt.ylabel("Energy ", fontsize=20)
-    plt.axis('tight')
+    toPlot = list([E,M,H,S])
+    ylabels = list(["Energy","Magnetization","Specific Heat","Susceptibility"])
 
-    f.add_subplot(2, 2, 2)
-    plt.scatter(ts, abs(M), s=50, marker='o', color='RoyalBlue')
-    plt.xlabel("Temperature (T)", fontsize=20)
-    plt.ylabel("Magnetization ", fontsize=20)
-    plt.axis('tight')
+    fig, axs = plt.subplots(2,2)
 
-    f.add_subplot(2, 2, 3)
-    plt.scatter(ts, H, s=50, marker='o', color='IndianRed')
-    plt.xlabel("Temperature (T)", fontsize=20)
-    plt.ylabel("Specific Heat", fontsize=20)
-    plt.axis('tight')
+    for ax, metric,ylabel in zip(axs.flat,toPlot,ylabels):
+        print(metric)
+        ax.scatter(ts, metric, s=10, marker='o', color='IndianRed')
+        ax.set(xlabel='Temperature', ylabel=ylabel)
+        if temperature_distribution == 'log':
+            ax.semilogx()
 
-    f.add_subplot(2, 2, 4)
-    plt.scatter(ts, S, s=50, marker='o', color='RoyalBlue')
-    plt.xlabel("Temperature (T)", fontsize=20)
-    plt.ylabel("Susceptibility", fontsize=20)
-    plt.axis('tight')
-
+    plt.tight_layout()
     # plt.show()
     plt.savefig(path_output + 'plots.png', dpi=300)
 
     del ts
     plt.close()
     plt.close(f)
+
+
 
 
 def peakdet(v, delta, x=None):
