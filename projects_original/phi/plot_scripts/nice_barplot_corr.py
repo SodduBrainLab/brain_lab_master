@@ -8,12 +8,12 @@ import matplotlib
 matplotlib.rcParams.update({'font.size': 18})
 from projects.phi.tools.utils import *
 
-main_path = '/Users/npopiel/Documents/empirical_phi/'
+main_path = '/Users/npopiel/Documents/empirical_phi/subject_level/'
 
-networks = ['Aud', 'DMN', 'Dorsal', 'Ventral', 'Cingulo', 'Fronto', 'Retro', 'SMhand', 'SMmouth', 'Vis', 'Baseline']
+networks = ['Aud', 'DMN', 'Dorsal', 'Ventral', 'Cingulo', 'Fronto', 'Retro', 'SMhand', 'SMmouth', 'Vis']#, 'Baseline']
 
 network_names = ['Auditory', 'DMN', 'Dorsal', 'Ventral', 'Cingulo', 'Frontoparietal', 'Retrosplenial', 'SM Hand',
-                 'SM Mouth', 'Visual', 'Random']
+                 'SM Mouth', 'Visual']#, 'Random']
 
 
 
