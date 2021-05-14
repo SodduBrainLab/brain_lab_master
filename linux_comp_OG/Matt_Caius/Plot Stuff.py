@@ -3,7 +3,7 @@ import numpy as np
 from projects.generalize_ising_model.core import generalized_ising
 from linux_comp_OG.projects.generalize_ising_model.tools.utils import *
 from linux_comp_OG.projects.phi.tools.utils import *
-from linux_comp_OG.Matt_Caius.CalculateFunctionalConnectivity import  sim_FCs, subject_rhoIJ
+from linux_comp_OG.Matt_Caius.CalculateFunctionalConnectivity import sim_FCs, subject_rhoIJ
 from linux_comp_OG.Matt_Caius.CalculateTstar2 import tstars, minMSEs
 import scipy.stats as stats
 
@@ -52,8 +52,6 @@ def GenFig(network,temp_range,no_runs = 200):
     maxSusValue = phiSusList[(PhiSusMax - ts).argmin()]
     maxSusPhis.append(maxSusValue)
     phiRatio.append(PhiMax/maxSusValue)
-
-
 
     fig1, axs = plt.subplots(3)
 

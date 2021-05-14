@@ -58,15 +58,12 @@ for root, dir, file in os.walk(time_series_Path):
 
         time_series_paths.append(filePath)
 
-
-
 sim_FCs = dict()
 subject_rhoIJ = dict()
 
 for network in networks:
     subject_rhoIJ[network] = list()
     sim_FCs[network] = np.nan_to_num(np.load(sim_FC_source + network + "/sim_fc.npy"))
-
 
 i = 0
 

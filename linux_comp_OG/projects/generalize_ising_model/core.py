@@ -146,7 +146,7 @@ def compute_par(values):
         if phi_variables:
             return (np.copy(E), np.copy(M), np.copy(S), np.copy(H), np.copy(simulated_fc), np.copy(values[1]), np.copy(values[2]), np.asarray(spin_mean))
         else:
-            return (np.copy(E), np.copy(M), np.copy(S), np.copy(H), np.copy(simulated_fc), np.copy(values[1]), np.copy(values[2]))
+            return (E, M, S, H, simulated_fc, values[1], values[2])
 
 
 def generalized_ising(Jij, temperature_parameters=(0.1, 5, 100), n_time_points=100, thermalize_time=0.3, temperature_distribution ='lineal', phi_variables = False, return_tc = False, type='digital'):
@@ -231,4 +231,4 @@ def generalized_ising(Jij, temperature_parameters=(0.1, 5, 100), n_time_points=1
             critical_temperature = to_find_critical_temperature(S, ts)
 
         
-            return np.copy(simulated_fc), np.copy(critical_temperature), np.copy(E), np.copy(M), np.copy(S), np.copy(H)
+            return simulated_fc, critical_temperature, E, M, S, H

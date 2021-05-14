@@ -1,5 +1,5 @@
 from projects.generalize_ising_model.core import generalized_ising
-from projects.generalize_ising_model.tools.utils import to_normalize, to_save_results, makedir,save_file
+from projects.generalize_ising_model.tools.utils import to_normalize, to_save_results, makedir, save_file
 import time
 
 def load_matrix(file):
